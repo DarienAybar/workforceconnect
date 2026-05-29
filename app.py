@@ -3,10 +3,10 @@ from flask_mysqldb import MySQL
  
 app = Flask(__name__)
  
-app.config['MYSQL_HOST']     = 'localhost'
+app.config['MYSQL_HOST']     = 'workforceconnect-db.ct0cqcmwgvyn.us-east-2.rds.amazonaws.com'
 app.config['MYSQL_USER']     = 'wfcuser'
-app.config['MYSQL_PASSWORD'] = 'BootcampPass2025!'
-app.config['MYSQL_DB']       = 'workforcedb'
+app.config['MYSQL_PASSWORD'] = 'BootcampPass2026'
+app.config['MYSQL_DB']       = 'workforceconnect-db'
  
 mysql = MySQL(app)
  
@@ -43,5 +43,5 @@ def registrations():
     return render_template('registrations.html', records=records)
  
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
 
